@@ -1,0 +1,131 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement.iOS\\BookManagement.iOS.csproj": {}
+  },
+  "projects": {
+    "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement.iOS\\BookManagement.iOS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement.iOS\\BookManagement.iOS.csproj",
+        "projectName": "BookManagement.iOS",
+        "projectPath": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement.iOS\\BookManagement.iOS.csproj",
+        "packagesPath": "C:\\Users\\a_1t9\\.nuget\\packages\\",
+        "outputPath": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement.iOS\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\ProgramData\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\a_1t9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "xamarinios10"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "xamarinios10": {
+            "projectReferences": {
+              "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj": {
+                "projectPath": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "xamarinios10": {
+          "dependencies": {
+            "Prism.DryIoc.Forms": {
+              "target": "Package",
+              "version": "[7.2.0.1367, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[3.6.0.344457, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj",
+        "projectName": "BookManagement",
+        "projectPath": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj",
+        "packagesPath": "C:\\Users\\a_1t9\\.nuget\\packages\\",
+        "outputPath": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\ProgramData\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\a_1t9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Prism.DryIoc.Forms": {
+              "target": "Package",
+              "version": "[7.2.0.1367, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[3.6.0.344457, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
