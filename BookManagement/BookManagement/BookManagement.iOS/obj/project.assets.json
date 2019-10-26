@@ -1090,24 +1090,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\a_1t9\\.nuget\\packages\\": {},
-    "C:\\ProgramData\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\ibuki\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement.iOS\\BookManagement.iOS.csproj",
+      "projectUniqueName": "C:\\東北Tech道場\\kobushi\\BookManagement\\BookManagement\\BookManagement.iOS\\BookManagement.iOS.csproj",
       "projectName": "BookManagement.iOS",
-      "projectPath": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement.iOS\\BookManagement.iOS.csproj",
-      "packagesPath": "C:\\Users\\a_1t9\\.nuget\\packages\\",
-      "outputPath": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement.iOS\\obj\\",
+      "projectPath": "C:\\東北Tech道場\\kobushi\\BookManagement\\BookManagement\\BookManagement.iOS\\BookManagement.iOS.csproj",
+      "packagesPath": "C:\\Users\\ibuki\\.nuget\\packages\\",
+      "outputPath": "C:\\東北Tech道場\\kobushi\\BookManagement\\BookManagement\\BookManagement.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\ProgramData\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\a_1t9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ibuki\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1121,8 +1121,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj": {
-              "projectPath": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj"
+            "C:\\東北Tech道場\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj": {
+              "projectPath": "C:\\東北Tech道場\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj"
             }
           }
         }

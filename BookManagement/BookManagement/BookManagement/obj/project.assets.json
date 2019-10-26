@@ -1145,25 +1145,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\a_1t9\\.nuget\\packages\\": {},
-    "C:\\ProgramData\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\ibuki\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj",
+      "projectUniqueName": "C:\\東北Tech道場\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj",
       "projectName": "BookManagement",
-      "projectPath": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj",
-      "packagesPath": "C:\\Users\\a_1t9\\.nuget\\packages\\",
-      "outputPath": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement\\obj\\",
+      "projectPath": "C:\\東北Tech道場\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj",
+      "packagesPath": "C:\\Users\\ibuki\\.nuget\\packages\\",
+      "outputPath": "C:\\東北Tech道場\\kobushi\\BookManagement\\BookManagement\\BookManagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\ProgramData\\Xamarin\\NuGet\\",
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\a_1t9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ibuki\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
