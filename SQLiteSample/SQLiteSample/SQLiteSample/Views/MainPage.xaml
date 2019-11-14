@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SQLiteSample.Views.MainPage"
+             Title="{Binding Title}">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <!--<Label Text="Welcome to Xamarin Forms and Prism!" />-->
+
+
+        <Entry Text="{Binding NameEntry}" />
+        <Entry Text="{Binding PhoneEntry}" />
+        <Button Text="データベースに保存"
+                Command="{Binding SaveButton_Clicked}" />
+        <!--<Button Text="{Binding SaveButtonText}"
+                Command="{Binding SaveButton_Clicked}" />-->
+        <Button Text="データベースから取得"
+                Command="{Binding ReadButton_Clicked}"/>
+    </StackLayout>
+
+</ContentPage>

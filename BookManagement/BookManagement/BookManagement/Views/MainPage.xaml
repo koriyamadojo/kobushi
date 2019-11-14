@@ -5,7 +5,14 @@
              Title="{Binding Title}">
 
     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Welcome to Xamarin Forms" />
+        <Button Text="QRコード読み取り" 
+                Clicked="OnQR"
+                HorizontalOptions="Center" 
+                VerticalOptions="CenterAndExpand" />
     </StackLayout>
+
+    <?xml version="1.0" encoding="utf-8"?>
+
+
 
 </ContentPage>

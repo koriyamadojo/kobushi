@@ -13,5 +13,12 @@ namespace BookManagement.Views
         {
             InitializeComponent();
         }
+
+        void OnQR(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new QRScanPage());
+        }
+
+
     }
 }

@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\東北Tech道場\\kobushi\\BookManagement\\BookManagement\\BookManagement.iOS\\BookManagement.iOS.csproj": {}
+    "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement.iOS\\BookManagement.iOS.csproj": {}
   },
   "projects": {
-    "C:\\東北Tech道場\\kobushi\\BookManagement\\BookManagement\\BookManagement.iOS\\BookManagement.iOS.csproj": {
+    "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement.iOS\\BookManagement.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\東北Tech道場\\kobushi\\BookManagement\\BookManagement\\BookManagement.iOS\\BookManagement.iOS.csproj",
+        "projectUniqueName": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement.iOS\\BookManagement.iOS.csproj",
         "projectName": "BookManagement.iOS",
-        "projectPath": "C:\\東北Tech道場\\kobushi\\BookManagement\\BookManagement\\BookManagement.iOS\\BookManagement.iOS.csproj",
-        "packagesPath": "C:\\Users\\ibuki\\.nuget\\packages\\",
-        "outputPath": "C:\\東北Tech道場\\kobushi\\BookManagement\\BookManagement\\BookManagement.iOS\\obj\\",
+        "projectPath": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement.iOS\\BookManagement.iOS.csproj",
+        "packagesPath": "C:\\Users\\a_1t9\\.nuget\\packages\\",
+        "outputPath": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\ibuki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\a_1t9\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\東北Tech道場\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj": {
-                "projectPath": "C:\\東北Tech道場\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj"
+              "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj": {
+                "projectPath": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj"
               }
             }
           }
@@ -65,21 +65,21 @@
         }
       }
     },
-    "C:\\東北Tech道場\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj": {
+    "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\東北Tech道場\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj",
+        "projectUniqueName": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj",
         "projectName": "BookManagement",
-        "projectPath": "C:\\東北Tech道場\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj",
-        "packagesPath": "C:\\Users\\ibuki\\.nuget\\packages\\",
-        "outputPath": "C:\\東北Tech道場\\kobushi\\BookManagement\\BookManagement\\BookManagement\\obj\\",
+        "projectPath": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement\\BookManagement.csproj",
+        "packagesPath": "C:\\Users\\a_1t9\\.nuget\\packages\\",
+        "outputPath": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi\\BookManagement\\BookManagement\\BookManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\ibuki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\a_1t9\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -117,13 +117,27 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[3.6.0.344457, )"
+            },
+            "ZXing.Net.Mobile": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "ZXing.Net.Mobile.Forms": {
+              "target": "Package",
+              "version": "[2.4.1, )"
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

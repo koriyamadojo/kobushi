@@ -1,10 +1,6 @@
-BookManagement
-DryIoc
+FastAndroidCamera
 FormsViewGroup
-Prism
-Prism.DryIoc.Forms
 Prism.Forms
-System.Runtime
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
 Xamarin.Android.Arch.Lifecycle.Common
@@ -44,7 +40,7 @@ Xamarin.Android.Support.v7.RecyclerView
 Xamarin.Android.Support.Vector.Drawable
 Xamarin.Android.Support.VersionedParcelable
 Xamarin.Android.Support.ViewPager
-Xamarin.Forms.Core
 Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
-Xamarin.Forms.Xaml
+ZXing.Net.Mobile.Forms.Android
+ZXingNetMobile
