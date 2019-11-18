@@ -1,0 +1,153 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\My Programs\\TECH\\05_Xamarin\\kobushi_sub\\ZXingSample_5\\ZXingSample_5\\ZXingSample_5.iOS\\ZXingSample_5.iOS.csproj": {}
+  },
+  "projects": {
+    "C:\\My Programs\\TECH\\05_Xamarin\\kobushi_sub\\ZXingSample_5\\ZXingSample_5\\ZXingSample_5.iOS\\ZXingSample_5.iOS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi_sub\\ZXingSample_5\\ZXingSample_5\\ZXingSample_5.iOS\\ZXingSample_5.iOS.csproj",
+        "projectName": "ZXingSample_5.iOS",
+        "projectPath": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi_sub\\ZXingSample_5\\ZXingSample_5\\ZXingSample_5.iOS\\ZXingSample_5.iOS.csproj",
+        "packagesPath": "C:\\Users\\a_1t9\\.nuget\\packages\\",
+        "outputPath": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi_sub\\ZXingSample_5\\ZXingSample_5\\ZXingSample_5.iOS\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\a_1t9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "xamarinios10"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "xamarinios10": {
+            "projectReferences": {
+              "C:\\My Programs\\TECH\\05_Xamarin\\kobushi_sub\\ZXingSample_5\\ZXingSample_5\\ZXingSample_5\\ZXingSample_5.csproj": {
+                "projectPath": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi_sub\\ZXingSample_5\\ZXingSample_5\\ZXingSample_5\\ZXingSample_5.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "xamarinios10": {
+          "dependencies": {
+            "Prism.DryIoc.Forms": {
+              "target": "Package",
+              "version": "[7.2.0.1367, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[3.6.0.344457, )"
+            },
+            "ZXing.Net.Mobile": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "ZXing.Net.Mobile.Forms": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\My Programs\\TECH\\05_Xamarin\\kobushi_sub\\ZXingSample_5\\ZXingSample_5\\ZXingSample_5\\ZXingSample_5.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi_sub\\ZXingSample_5\\ZXingSample_5\\ZXingSample_5\\ZXingSample_5.csproj",
+        "projectName": "ZXingSample_5",
+        "projectPath": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi_sub\\ZXingSample_5\\ZXingSample_5\\ZXingSample_5\\ZXingSample_5.csproj",
+        "packagesPath": "C:\\Users\\a_1t9\\.nuget\\packages\\",
+        "outputPath": "C:\\My Programs\\TECH\\05_Xamarin\\kobushi_sub\\ZXingSample_5\\ZXingSample_5\\ZXingSample_5\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\a_1t9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Prism.DryIoc.Forms": {
+              "target": "Package",
+              "version": "[7.2.0.1367, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[3.6.0.344457, )"
+            },
+            "ZXing.Net.Mobile": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "ZXing.Net.Mobile.Forms": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

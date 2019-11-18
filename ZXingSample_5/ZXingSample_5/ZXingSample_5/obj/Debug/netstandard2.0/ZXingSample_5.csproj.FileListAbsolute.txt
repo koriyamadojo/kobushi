@@ -1,0 +1,13 @@
+C:\My Programs\TECH\05_Xamarin\kobushi_sub\ZXingSample_5\ZXingSample_5\ZXingSample_5\bin\Debug\netstandard2.0\ZXingSample_5.deps.json
+C:\My Programs\TECH\05_Xamarin\kobushi_sub\ZXingSample_5\ZXingSample_5\ZXingSample_5\bin\Debug\netstandard2.0\ZXingSample_5.dll
+C:\My Programs\TECH\05_Xamarin\kobushi_sub\ZXingSample_5\ZXingSample_5\ZXingSample_5\bin\Debug\netstandard2.0\ZXingSample_5.pdb
+C:\My Programs\TECH\05_Xamarin\kobushi_sub\ZXingSample_5\ZXingSample_5\ZXingSample_5\obj\Debug\netstandard2.0\ZXingSample_5.csprojAssemblyReference.cache
+C:\My Programs\TECH\05_Xamarin\kobushi_sub\ZXingSample_5\ZXingSample_5\ZXingSample_5\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\My Programs\TECH\05_Xamarin\kobushi_sub\ZXingSample_5\ZXingSample_5\ZXingSample_5\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\My Programs\TECH\05_Xamarin\kobushi_sub\ZXingSample_5\ZXingSample_5\ZXingSample_5\obj\Debug\netstandard2.0\ZXingSample_5.AssemblyInfoInputs.cache
+C:\My Programs\TECH\05_Xamarin\kobushi_sub\ZXingSample_5\ZXingSample_5\ZXingSample_5\obj\Debug\netstandard2.0\ZXingSample_5.AssemblyInfo.cs
+C:\My Programs\TECH\05_Xamarin\kobushi_sub\ZXingSample_5\ZXingSample_5\ZXingSample_5\obj\Debug\netstandard2.0\ZXingSample_5.dll
+C:\My Programs\TECH\05_Xamarin\kobushi_sub\ZXingSample_5\ZXingSample_5\ZXingSample_5\obj\Debug\netstandard2.0\ZXingSample_5.pdb
+C:\My Programs\TECH\05_Xamarin\kobushi_sub\ZXingSample_5\ZXingSample_5\ZXingSample_5\obj\Debug\netstandard2.0\Views\PrismContentPage1.xaml.g.cs
+C:\My Programs\TECH\05_Xamarin\kobushi_sub\ZXingSample_5\ZXingSample_5\ZXingSample_5\obj\Debug\netstandard2.0\Views\QRScanPage.xaml.g.cs
+C:\My Programs\TECH\05_Xamarin\kobushi_sub\ZXingSample_5\ZXingSample_5\ZXingSample_5\obj\Debug\netstandard2.0\XamlC.stamp
