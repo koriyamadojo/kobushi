@@ -22,9 +22,9 @@ namespace BookManagement.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-
             //追加
             ZXing.Net.Mobile.Forms.iOS.Platform.Init();
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
 
             LoadApplication(new App(new iOSInitializer()));
 

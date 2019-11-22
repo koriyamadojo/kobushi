@@ -7,5 +7,18 @@
 
 		<!-- Application resource dictionary -->
 
-	</Application.Resources>
+
+        <!-- アイコンフォント設定ここから -->
+        <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
+            <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons" />
+            <On Platform="iOS" Value="Material Design Icons" />
+        </OnPlatform>
+        <!-- アイコンフォント設定ここまで -->
+        <!-- アイコンフォントの名称定義 ここから -->
+        <x:String x:Key="check">&#xF12C;</x:String>
+        <x:String x:Key="calendar-month">&#xFDFA;</x:String>
+        <x:String x:Key="plus">&#xF415;</x:String>
+        <!-- アイコンフォントの名称定義 ここまで -->
+
+    </Application.Resources>
 </prism:PrismApplication>

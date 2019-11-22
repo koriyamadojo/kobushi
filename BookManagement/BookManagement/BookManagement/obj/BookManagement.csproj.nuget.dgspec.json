@@ -43,6 +43,14 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "DynamicJson": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -52,6 +60,18 @@
             "Prism.DryIoc.Forms": {
               "target": "Package",
               "version": "[7.2.0.1367, )"
+            },
+            "ServiceStack.Text": {
+              "target": "Package",
+              "version": "[5.7.0, )"
+            },
+            "Xamarin.FFImageLoading": {
+              "target": "Package",
+              "version": "[2.4.11.982, )"
+            },
+            "Xamarin.FFImageLoading.Forms": {
+              "target": "Package",
+              "version": "[2.4.11.982, )"
             },
             "Xamarin.Forms": {
               "target": "Package",

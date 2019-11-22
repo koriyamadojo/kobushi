@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="BookManagement.Views.ScanPage"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:local1="clr-namespace:BookManagement.ViewModels">
+
+
+    <!--<ContentPage.Content>
+        <Grid>
+            <zxing:ZXingScannerView x:Name="zxing"
+                                    OnScanResult="Handle_OnScanResult"/>
+            <zxing:ZXingDefaultOverlay />
+        </Grid>
+    </ContentPage.Content>-->
+
+
+    <ContentPage.BindingContext>
+        <local1:ScanPageViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Grid AbsoluteLayout.LayoutFlags="All"
+                  AbsoluteLayout.LayoutBounds="0.5, 0.5, 1, 1">
+                <zxing:ZXingScannerView x:Name="zxing"
+                                        ScanResultCommand="{Binding ScanButtonClicked}"
+                                        IsAnalyzing="{Binding IsAnalyzing}"/>
+                <zxing:ZXingDefaultOverlay />
+            </Grid>
+            <!--ISBNコードだった-->
+            <Frame AbsoluteLayout.LayoutFlags="PositionProportional"
+                   AbsoluteLayout.LayoutBounds="0.5, 0.5, AutoSize, AutoSize"
+                   IsVisible="{Binding SuccessFrameVisible}">
+                <StackLayout>
+                    <Label Text="{Binding ScannedMessage}"
+                           HorizontalTextAlignment="Center"
+                           FontSize = "20"/>
+                    <ffimageloading:CachedImage Source="{Binding ScannedImage}"/>
+                    <!--<ffimageloading:CachedImage Source="{Binding ScannedImage}"/>-->
+                    <Label Text="読み取れたよ!"
+                           HorizontalTextAlignment="Center"/>
+                    <Label Text="{Binding ScannedCode}"
+                           HorizontalTextAlignment="Center"/>
+                    
+
+                    <!--<Button Text="本棚に追加する"
+                            Clicked="AddButtonClicked"/>
+                    <Button Text="保存しないで戻る"
+                            Clicked="CancelButtonClicked"/>-->
+                    
+                    <Button Text="本棚に追加する" Command="{Binding AddButtonClicked}"/>
+                    <Button Text="保存しないで戻る" Command="{Binding CancelButtonClicked}"/>
+
+                </StackLayout>
+            </Frame>
+            <!--ISBNコードじゃなかった-->
+            <Frame AbsoluteLayout.LayoutFlags="PositionProportional"
+                   AbsoluteLayout.LayoutBounds="0.5, 0.5, AutoSize, AutoSize"
+                   IsVisible="{Binding FailureFrameVisible}">
+                <StackLayout>
+                    <Image Source="cat1.png"/>
+                    <Label Text="読み取れなかったよ!"
+                           HorizontalTextAlignment="Center"/>
+                    <Label Text="{Binding ScannedMessage}"
+                           HorizontalTextAlignment="Center"/>
+                </StackLayout>
+            </Frame>
+            
+            
+        </AbsoluteLayout>
+    </ContentPage.Content>
+    
+    
+
+</ContentPage>

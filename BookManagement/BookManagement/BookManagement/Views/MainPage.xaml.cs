@@ -12,13 +12,13 @@ namespace BookManagement.Views
         public MainPage()
         {
             InitializeComponent();
-        }
+            //plus.Source = ImageSource.FromResource("BookManagement.Image.plus.png");
 
-        void OnQR(object sender, EventArgs e)
+
+        }
+        void ScanButtonClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new QRScanPage());
+            Navigation.PushAsync(new ScanPage());
         }
-
-
     }
 }

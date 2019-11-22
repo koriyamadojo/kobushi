@@ -23,15 +23,20 @@ namespace BookManagement
         {
             InitializeComponent();
 
+            ////ここを変更
+            //MainPage = new NavigationPage(new MainPage());
+
             await NavigationService.NavigateAsync("NavigationPage/MainPage");
+
+
+
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
-            containerRegistry.RegisterForNavigation<PrismContentPage1, PrismContentPage1ViewModel>();
-            containerRegistry.RegisterForNavigation<QRScanPage, QRScanPageViewModel>();
+            containerRegistry.RegisterForNavigation<ScanPage, ScanPageViewModel>();
         }
     }
 }

@@ -13,7 +13,7 @@ namespace BookManagement.ViewModels
         public MainPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
-            Title = "Main Page";
+            Title = "Book Mnagement";
         }
     }
 }

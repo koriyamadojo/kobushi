@@ -4,15 +4,96 @@
              x:Class="BookManagement.Views.MainPage"
              Title="{Binding Title}">
 
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Button Text="QRコード読み取り" 
-                Clicked="OnQR"
-                HorizontalOptions="Center" 
-                VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <!--<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="Welcome to Xamarin Forms and Prism!" />
+        <Button Text="+" 
+                Clicked="ScanButtonClicked"
+                HorizontalOptions="Center"
+                VerticalOptions = "CenterAndExpand"
+                BackgroundColor="Pink"
+                BorderRadius="50"/>
+        <Label HorizontalOptions="FillAndExpand"                        
+               FontFamily="{DynamicResource MaterialFontFamily}"
+               Text="これはアイコンフォントの「 &#xFDFA; 」です。" />
+        <ImageButton Clicked="ScanButtonClicked"
+                     BackgroundColor="Pink"
+                     Padding="10"
+                     CornerRadius="25"
+                     WidthRequest="50"
+                     HeightRequest="50"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center">
+            <ImageButton.Source>
+                <FontImageSource FontFamily="{DynamicResource MaterialFontFamily}"
+                                 Glyph="{StaticResource plus}"
+                                 Color="Aqua"
+                                 />
+            </ImageButton.Source>
+        </ImageButton>
+    </StackLayout>-->
+    
+    
+    
+    
 
-    <?xml version="1.0" encoding="utf-8"?>
+    <!--<StackLayout HorizontalOptions = "Center"
+             VerticalOptions = "Center"
+             WidthRequest = "400">
+
+        --><!--URLから画像を取得--><!--
+        <Image Source = "https://i2.wp.com/oxamarin.com/wp-content/uploads/2016/12/りんちゃん.jpg"/>
+
+    </StackLayout>-->
 
 
+
+
+
+
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="100" />
+            </Grid.ColumnDefinitions>
+
+
+            <Label HorizontalOptions="FillAndExpand"                        
+               FontFamily="{DynamicResource MaterialFontFamily}"
+               Text="これはアイコンフォントの「 &#xFDFA; 」です。" />
+
+            <Image Source="https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/3216\/9784798153216.jpg?_ex=200x200"/>
+
+
+
+            <ImageButton Clicked="ScanButtonClicked"
+                         Grid.Column="1"
+                         Grid.Row="1"
+                         x:Name="btn"
+                         Padding="10"
+                         CornerRadius="35"
+                         WidthRequest="70"
+                         HeightRequest="70"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         BackgroundColor="#FFABCE"
+                         >
+                <ImageButton.Source>
+                    <FontImageSource
+                        Color="white"
+                        FontFamily="{DynamicResource MaterialFontFamily}"
+                        Glyph="{StaticResource plus}"
+                        />
+                </ImageButton.Source>
+            </ImageButton>
+            
+        </Grid>
+    </ContentPage.Content>
 
 </ContentPage>
