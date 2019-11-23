@@ -32,33 +32,52 @@ namespace BookManagement.ViewModels
                     //ISBNコードだった
                     if (scannedCode.IndexOf("978") == 0)
                     {
-                        SuccessFrameVisible = true; //SuccessFrameを表示
-                        ScannedCode = result.Text;
-
+                        
                         //DynamicJson bookData = RakutenAPI(scannedCode);
                         //Console.WriteLine(bookData);
                         //Console.WriteLine(bookData.GetType().FullName);
                         //string title = bookData.title;
 
                         string str = RakutenAPI(scannedCode);
+                        Console.WriteLine(str);
                         var jsonData = DynamicJson.Parse(str); //先にNuGetを利用してDynamicJsonを導入している必要がある
-                        var bookData = jsonData.Items[0].Item;
-                        Console.WriteLine(bookData);
-                        Console.WriteLine(bookData.GetType().FullName);
-                        Console.WriteLine(bookData.title);
-                        Console.WriteLine(bookData.largeImageUrl);
-                        string imageUrl = bookData.largeImageUrl.Replace("?_ex=200x200", "");
-                        Console.WriteLine(imageUrl);
-                        ScannedMessage = bookData.title;
-                        ScannedImage =imageUrl;
+                        Console.WriteLine(jsonData.count);
 
+                        if (jsonData.count != 0)
+                        {
+                            SuccessFrameVisible = true; //SuccessFrameを表示
+                            ScannedCode = result.Text;
+
+                            var bookData = jsonData.Items[0].Item;
+                            Console.WriteLine(bookData);
+                            Console.WriteLine(bookData.GetType().FullName);
+                            Console.WriteLine(bookData.title);
+                            Console.WriteLine(bookData.largeImageUrl);
+                            string imageUrl = bookData.largeImageUrl.Replace("?_ex=200x200", "");
+                            Console.WriteLine(imageUrl);
+                            ScannedMessage = bookData.title;
+                            ScannedImage = imageUrl;
+
+                            await Task.Delay(2000);    //1秒待機
+                            SuccessFrameVisible = false;      //Frameを非表示
+                            this.IsAnalyzing = true;   //読み取り再開
+
+                        }
+                        else
+                        {
+                            FailureFrameVisible = true; //FailureFrameを表示
+                            ScannedMessage = "検索できませんでした";
+                            await Task.Delay(2000);    //1秒待機
+                            FailureFrameVisible = false;      //Frameを非表示
+                            this.IsAnalyzing = true;   //読み取り再開
+                        }
                     }
                     //ISBNコードじゃなかった
                     else
                     {
                         FailureFrameVisible = true; //FailureFrameを表示
                         ScannedMessage = "これは価格のバーコードです。\n上段のバーコードをスキャンしてください。";
-                        await Task.Delay(3000);    //1秒待機
+                        await Task.Delay(2000);    //1秒待機
                         FailureFrameVisible = false;      //Frameを非表示
                         this.IsAnalyzing = true;   //読み取り再開
 
@@ -169,7 +188,10 @@ namespace BookManagement.ViewModels
                 REQUEST_URL
                 + "format=json" //フォーマットの指定
                 + "&isbn=" + isbn
+                //+ "&isbn=9784813282983"
                 + "&applicationId=" + APPLICATION_ID;
+
+            //var testReq = await API();
 
             //リクエスト
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create(requstUrl);
@@ -188,6 +210,14 @@ namespace BookManagement.ViewModels
             //Console.WriteLine(bookData.GetType().FullName);
             return (str);
         }
+
+
+        //public async Task<string> API()
+        //{
+
+        //}
+
+
 
 
         public DelegateCommand AddButtonClicked { get; private set; }
