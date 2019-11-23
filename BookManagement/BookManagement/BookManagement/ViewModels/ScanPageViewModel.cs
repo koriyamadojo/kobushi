@@ -20,6 +20,8 @@ namespace BookManagement.ViewModels
     {
        
         public event PropertyChangedEventHandler PropertyChanged;
+
+
         public ScanPageViewModel()
         {
             ScanButtonClicked = new Command<ZXing.Result>((result) =>
@@ -58,9 +60,7 @@ namespace BookManagement.ViewModels
                             ScannedMessage = bookData.title;
                             ScannedImage = imageUrl;
 
-                            await Task.Delay(2000);    //1秒待機
-                            SuccessFrameVisible = false;      //Frameを非表示
-                            this.IsAnalyzing = true;   //読み取り再開
+                     
 
                         }
                         else
@@ -90,7 +90,68 @@ namespace BookManagement.ViewModels
 
                 });
             });
+
+            AddButtonClicked = new DelegateCommand(
+                () => {
+                    SuccessFrameVisible = false;      //Frameを非表示
+                    this.IsAnalyzing = true;   //読み取り再開
+                });
+            CancelButtonClicked = new DelegateCommand(
+                () => {
+                    SuccessFrameVisible = false;      //Frameを非表示
+                    this.IsAnalyzing = true;   //読み取り再開
+                });
+
+
         }
+
+
+        /// <summary>
+        /// 読み取ったISBNコードをもとに楽天APIから書籍を検索する
+        /// </summary>
+        public string RakutenAPI(string ScannedCode)
+        {
+            const string REQUEST_URL = "https://app.rakuten.co.jp/services/api/BooksBook/Search/20170404?";
+            const string APPLICATION_ID = "1013677670082002246"; //ここにアプリIDを指定
+            string isbn = ScannedCode; //ISBNコード
+            string requstUrl =
+                REQUEST_URL
+                + "format=json" //フォーマットの指定
+                                //+ "&isbn=" + isbn
+                + "&isbn=9784813282983"
+                + "&applicationId=" + APPLICATION_ID;
+
+            //var testReq = await API();
+
+            //リクエスト
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(requstUrl);
+            req.Method = "GET"; //メソッドの形式
+            HttpWebResponse res = (HttpWebResponse)req.GetResponse(); //リクエストして格納
+            Console.WriteLine(res);
+
+            //レスポンスデータ整形
+            Stream s = res.GetResponseStream(); //レスポンスのストリームを取得
+            StreamReader sr = new StreamReader(s);
+            string str = sr.ReadToEnd(); //ストリームの内容を全てstrに格納
+
+            //var jsonData = DynamicJson.Parse(str); //先にNuGetを利用してDynamicJsonを導入している必要がある
+            //var bookData = jsonData.Items[0].Item;
+            //Console.WriteLine(bookData);
+            //Console.WriteLine(bookData.GetType().FullName);
+            return (str);
+        }
+
+
+        public void test()
+        {
+            SuccessFrameVisible = false;      //Frameを非表示
+            this.IsAnalyzing = true;   //読み取り再開
+        }
+
+
+
+
+
         public Command ScanButtonClicked { get; }
 
 
@@ -174,77 +235,8 @@ namespace BookManagement.ViewModels
         }
 
 
-
-
-        /// <summary>
-        /// 読み取ったISBNコードをもとに楽天APIから書籍を検索する
-        /// </summary>
-        public string RakutenAPI(string ScannedCode)
-        {
-            const string REQUEST_URL = "https://app.rakuten.co.jp/services/api/BooksBook/Search/20170404?";
-            const string APPLICATION_ID = "1013677670082002246"; //ここにアプリIDを指定
-            string isbn = ScannedCode; //ISBNコード
-            string requstUrl = 
-                REQUEST_URL
-                + "format=json" //フォーマットの指定
-                + "&isbn=" + isbn
-                //+ "&isbn=9784813282983"
-                + "&applicationId=" + APPLICATION_ID;
-
-            //var testReq = await API();
-
-            //リクエスト
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(requstUrl);
-            req.Method = "GET"; //メソッドの形式
-            HttpWebResponse res = (HttpWebResponse)req.GetResponse(); //リクエストして格納
-            Console.WriteLine(res);
-
-            //レスポンスデータ整形
-            Stream s = res.GetResponseStream(); //レスポンスのストリームを取得
-            StreamReader sr = new StreamReader(s);
-            string str = sr.ReadToEnd(); //ストリームの内容を全てstrに格納
-
-            //var jsonData = DynamicJson.Parse(str); //先にNuGetを利用してDynamicJsonを導入している必要がある
-            //var bookData = jsonData.Items[0].Item;
-            //Console.WriteLine(bookData);
-            //Console.WriteLine(bookData.GetType().FullName);
-            return (str);
-        }
-
-
-        //public async Task<string> API()
-        //{
-
-        //}
-
-
-
-
         public DelegateCommand AddButtonClicked { get; private set; }
         public DelegateCommand CancelButtonClicked { get; private set; }
-
-        /// <summary>
-        /// ISBNコード読み込んだときのボタン
-        /// </summary>
-        public ScanPageViewModel(INavigationService navigationService)
-        {
-            AddButtonClicked = new DelegateCommand(
-                () =>
-                {
-                    SuccessFrameVisible = false;      //Frameを非表示
-                    this.IsAnalyzing = true;   //読み取り再開
-                }, // 実行される内容
-                () => true); // 実行できるか？
-
-            CancelButtonClicked = new DelegateCommand(
-                () =>
-                {
-                    SuccessFrameVisible = false;      //Frameを非表示
-                    this.IsAnalyzing = true;   //読み取り再開
-                }, // 実行される内容
-                () => true); // 実行できるか？
-
-        }
 
     }
 
