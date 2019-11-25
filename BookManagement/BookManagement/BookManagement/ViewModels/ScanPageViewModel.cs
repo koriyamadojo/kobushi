@@ -86,8 +86,6 @@ namespace BookManagement.ViewModels
 
                     }
                     
-                    
-
                 });
             });
 
@@ -117,7 +115,7 @@ namespace BookManagement.ViewModels
             string requstUrl =
                 REQUEST_URL
                 + "format=json" //フォーマットの指定
-                                //+ "&isbn=" + isbn
+                + "&isbn=" + isbn
                 + "&isbn=9784813282983"
                 + "&applicationId=" + APPLICATION_ID;
 
@@ -133,6 +131,7 @@ namespace BookManagement.ViewModels
             Stream s = res.GetResponseStream(); //レスポンスのストリームを取得
             StreamReader sr = new StreamReader(s);
             string str = sr.ReadToEnd(); //ストリームの内容を全てstrに格納
+            sr.Close();
 
             //var jsonData = DynamicJson.Parse(str); //先にNuGetを利用してDynamicJsonを導入している必要がある
             //var bookData = jsonData.Items[0].Item;
@@ -142,11 +141,11 @@ namespace BookManagement.ViewModels
         }
 
 
-        public void test()
-        {
-            SuccessFrameVisible = false;      //Frameを非表示
-            this.IsAnalyzing = true;   //読み取り再開
-        }
+        //public void Test()
+        //{
+        //    SuccessFrameVisible = false;      //Frameを非表示
+        //    this.IsAnalyzing = true;   //読み取り再開
+        //}
 
 
 

@@ -1156,3 +1156,10 @@ C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagem
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\res\drawable\splash_screen.xml
+C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\res\values\colors.xml
+C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\res\drawable\splash_logo.png
+C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\android\src\md5c4f766fc51637d59585135f711f0d353\SplashActivity.java
+C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\res\drawable\logo.png
+C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\res\drawable\tosyokan_book_tana.png
+C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\res\drawable\splash_blogo.png
