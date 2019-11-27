@@ -3,5 +3,6 @@
   <PropertyGroup>
     <SelectedDevice>Samsung SC-01K</SelectedDevice>
     <AndroidDesignerPreferredTheme>Theme.DeviceDefault.Light.NoActionBar.Fullscreen</AndroidDesignerPreferredTheme>
+    <DefaultDevice>nexus_6p</DefaultDevice>
   </PropertyGroup>
 </Project>
