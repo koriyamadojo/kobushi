@@ -28,8 +28,6 @@ namespace BookManagement
 
             await NavigationService.NavigateAsync("NavigationPage/MainPage");
 
-
-
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)

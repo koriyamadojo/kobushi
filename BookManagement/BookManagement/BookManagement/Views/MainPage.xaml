@@ -1,53 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
              x:Class="BookManagement.Views.MainPage"
              Title="{Binding Title}">
-
-    <!--<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Welcome to Xamarin Forms and Prism!" />
-        <Button Text="+" 
-                Clicked="ScanButtonClicked"
-                HorizontalOptions="Center"
-                VerticalOptions = "CenterAndExpand"
-                BackgroundColor="Pink"
-                BorderRadius="50"/>
-        <Label HorizontalOptions="FillAndExpand"                        
-               FontFamily="{DynamicResource MaterialFontFamily}"
-               Text="これはアイコンフォントの「 &#xFDFA; 」です。" />
-        <ImageButton Clicked="ScanButtonClicked"
-                     BackgroundColor="Pink"
-                     Padding="10"
-                     CornerRadius="25"
-                     WidthRequest="50"
-                     HeightRequest="50"
-                     VerticalOptions="Center"
-                     HorizontalOptions="Center">
-            <ImageButton.Source>
-                <FontImageSource FontFamily="{DynamicResource MaterialFontFamily}"
-                                 Glyph="{StaticResource plus}"
-                                 Color="Aqua"
-                                 />
-            </ImageButton.Source>
-        </ImageButton>
-    </StackLayout>-->
-    
-    
-    
     
 
-    <!--<StackLayout HorizontalOptions = "Center"
-             VerticalOptions = "Center"
-             WidthRequest = "400">
-
-        --><!--URLから画像を取得--><!--
-        <Image Source = "https://i2.wp.com/oxamarin.com/wp-content/uploads/2016/12/りんちゃん.jpg"/>
-
-    </StackLayout>-->
-
-
-
-
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Secondary"
+                     Icon="{StaticResource plus}"
+                     Text="表示ビュー切り替え"
+                     Priority="0"
+                     Command="{Binding GoToCartCommand}">
+        </ToolbarItem>
+        <ToolbarItem Order="Secondary"
+                     Text="著者別表示"
+                     Priority="0"
+                     Command="{Binding GoToCartCommand}"/>
+        <ToolbarItem Order="Secondary"
+                     Text="絞り込み"
+                     Priority="0"
+                     Command="{Binding GoToCartCommand}"/>
+        <ToolbarItem Order="Secondary"
+                     Text="並び替え"
+                     Priority="0"
+                     Command="{Binding GoToCartCommand}"/>
+        <ToolbarItem Order="Secondary"
+                     Text="データ集計"
+                     Priority="0"
+                     Command="{Binding GoToCartCommand}"/>
+        <ToolbarItem Order="Secondary"
+                     Text="本棚内検索"
+                     Priority="0"
+                     Command="{Binding GoToCartCommand}"/>
+        <ToolbarItem Order="Secondary"
+                     Text="本棚内検索"
+                     Priority="0"
+                     Command="{Binding GoToCartCommand}"/>
+    </ContentPage.ToolbarItems>
 
 
 
@@ -68,9 +60,6 @@
                FontFamily="{DynamicResource MaterialFontFamily}"
                Text="これはアイコンフォントの「 &#xFDFA; 」です。" />
 
-            <Image Source="https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/3216\/9784798153216.jpg?_ex=200x200"/>
-
-
 
             <ImageButton Clicked="ScanButtonClicked"
                          Grid.Column="1"
@@ -78,8 +67,8 @@
                          x:Name="btn"
                          Padding="10"
                          CornerRadius="35"
-                         WidthRequest="70"
-                         HeightRequest="70"
+                         WidthRequest="60"
+                         HeightRequest="60"
                          VerticalOptions="Center"
                          HorizontalOptions="Center"
                          BackgroundColor="#FFABCE"
