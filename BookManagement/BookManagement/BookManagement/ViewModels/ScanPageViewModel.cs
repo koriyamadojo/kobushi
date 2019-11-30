@@ -12,7 +12,8 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Web;
 using Xamarin.Forms;
-
+using SQLite;
+using BookManagement.Objects;
 
 namespace BookManagement.ViewModels
 {
@@ -21,9 +22,12 @@ namespace BookManagement.ViewModels
        
         public event PropertyChangedEventHandler PropertyChanged;
 
-
+        private dynamic bookData;
         public ScanPageViewModel()
         {
+            
+
+
             ScanButtonClicked = new Command<ZXing.Result>((result) =>
             {
                 Device.BeginInvokeOnMainThread(async () =>
@@ -34,23 +38,24 @@ namespace BookManagement.ViewModels
                     //ISBNコードだった
                     if (scannedCode.IndexOf("978") == 0)
                     {
-                        
+
                         //DynamicJson bookData = RakutenAPI(scannedCode);
                         //Console.WriteLine(bookData);
                         //Console.WriteLine(bookData.GetType().FullName);
                         //string title = bookData.title;
 
-                        string str = RakutenAPI(scannedCode);
-                        Console.WriteLine(str);
-                        var jsonData = DynamicJson.Parse(str); //先にNuGetを利用してDynamicJsonを導入している必要がある
-                        Console.WriteLine(jsonData.count);
+                        bookData = RakutenAPI(scannedCode);
 
-                        if (jsonData.count != 0)
+                        //Console.WriteLine(str);
+                        //var jsonData = DynamicJson.Parse(str); //先にNuGetを利用してDynamicJsonを導入している必要がある
+                        //Console.WriteLine(jsonData.count);
+
+                        if (bookData != null)
                         {
                             SuccessFrameVisible = true; //SuccessFrameを表示
                             ScannedCode = result.Text;
 
-                            var bookData = jsonData.Items[0].Item;
+                            //var bookData = jsonData.Items[0].Item;
                             Console.WriteLine(bookData);
                             Console.WriteLine(bookData.GetType().FullName);
                             Console.WriteLine(bookData.title);
@@ -60,8 +65,7 @@ namespace BookManagement.ViewModels
                             ScannedMessage = bookData.title;
                             ScannedImage = imageUrl;
 
-                     
-
+                            
                         }
                         else
                         {
@@ -85,29 +89,26 @@ namespace BookManagement.ViewModels
                         //this.IsAnalyzing = true;   //読み取り再開
 
                     }
-                    
                 });
             });
 
             AddButtonClicked = new DelegateCommand(
-                () => {
-                    SuccessFrameVisible = false;      //Frameを非表示
-                    this.IsAnalyzing = true;   //読み取り再開
-                });
+                () => RegisterBook(bookData)
+                );
+
             CancelButtonClicked = new DelegateCommand(
                 () => {
                     SuccessFrameVisible = false;      //Frameを非表示
                     this.IsAnalyzing = true;   //読み取り再開
                 });
 
-
         }
 
 
-        /// <summary>
+        /// —————————————————————————————————————————————————————————————————————————————
         /// 読み取ったISBNコードをもとに楽天APIから書籍を検索する
-        /// </summary>
-        public string RakutenAPI(string ScannedCode)
+        /// —————————————————————————————————————————————————————————————————————————————
+        public dynamic RakutenAPI(string ScannedCode)
         {
             const string REQUEST_URL = "https://app.rakuten.co.jp/services/api/BooksBook/Search/20170404?";
             const string APPLICATION_ID = "1013677670082002246"; //ここにアプリIDを指定
@@ -116,7 +117,7 @@ namespace BookManagement.ViewModels
                 REQUEST_URL
                 + "format=json" //フォーマットの指定
                 + "&isbn=" + isbn
-                + "&isbn=9784813282983"
+                //+ "&isbn=9784813282983"
                 + "&applicationId=" + APPLICATION_ID;
 
             //var testReq = await API();
@@ -133,13 +134,73 @@ namespace BookManagement.ViewModels
             string str = sr.ReadToEnd(); //ストリームの内容を全てstrに格納
             sr.Close();
 
-            //var jsonData = DynamicJson.Parse(str); //先にNuGetを利用してDynamicJsonを導入している必要がある
-            //var bookData = jsonData.Items[0].Item;
-            //Console.WriteLine(bookData);
-            //Console.WriteLine(bookData.GetType().FullName);
-            return (str);
+            var jsonData = DynamicJson.Parse(str); //先にNuGetを利用してDynamicJsonを導入している必要がある
+            
+            
+            if (jsonData.count != 0)
+            {
+                return(jsonData.Items[0].Item);
+                
+            }
+            else
+            {
+                return (null);
+            }
         }
 
+        /// —————————————————————————————————————————————————————————————————————————————
+        /// 保存ボタンがクリックされたらCustomerの名前を電話番号にデータを保存する
+        /// —————————————————————————————————————————————————————————————————————————————
+        private void RegisterBook(dynamic bookData)
+        {
+
+            Console.WriteLine(bookData);
+            Console.WriteLine(bookData.title);
+            Console.WriteLine(bookData.subTitleKana);
+
+            var customer = new Customer()
+            {
+                //Name = "あいう",
+                //Phone = bookData.title,
+                title = bookData.title,
+                //titleKana = bookData.titleKana,
+                //subTitle = bookData.subTitle,
+                //subTitleKana = bookData.subTitleKana,
+                //seriesName = bookData.seriesName,
+                //seriesNameKana = bookData.seriesNameKana,
+                //contents = bookData.contents,
+                //author = bookData.author,
+                //authorKana = bookData.authorKana,
+                //publisherName = bookData.publisherName,
+                //size = bookData.size,
+                //isbn = bookData.isbn,
+                //itemCaption = bookData.itemCaption,
+                //salesDate = bookData.salesDate,
+                //itemPrice = bookData.itemPrice,
+                //itemUrl = bookData.itemUrl,
+                //affiliateUrl = bookData.affiliateUrl,
+                //imageUrl = bookData.imageUrl,
+                //chirayomiUrl = bookData.chirayomiUrl,
+                //availability = bookData.availability,
+                //postageFlag = bookData.postageFlag,
+                //limitedFlag = bookData.limitedFlag,
+                //reviewCount = bookData.reviewCount,
+                //reviewAverage = bookData.reviewAverage,
+                //booksGenreId = bookData.booksGenreId
+            };
+
+            //SQLiteと接続
+            //初回は空のテーブルを作成。次回から該当DBに接続
+            using (var connection = new SQLiteConnection(App.DatabasePath))
+            {
+                connection.CreateTable<Customer>();
+                connection.Insert(customer);
+            }
+
+
+            SuccessFrameVisible = false;      //Frameを非表示
+            this.IsAnalyzing = true;   //読み取り再開
+        }
 
         //public void Test()
         //{
@@ -150,6 +211,11 @@ namespace BookManagement.ViewModels
 
 
 
+
+
+        /// —————————————————————————————————————————————————————————————————————————————
+        /// Binding のためのクラス
+        /// —————————————————————————————————————————————————————————————————————————————
 
         public Command ScanButtonClicked { get; }
 

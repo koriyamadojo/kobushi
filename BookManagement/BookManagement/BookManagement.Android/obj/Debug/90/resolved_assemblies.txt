@@ -15,6 +15,12 @@ C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagem
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\android\assets\Prism.DryIoc.Forms.dll
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\android\assets\Prism.Forms.dll
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\android\assets\ServiceStack.Text.dll
+C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\android\assets\SQLite-net.dll
+C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\android\assets\SQLitePCLRaw.batteries_green.dll
+C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\android\assets\SQLitePCLRaw.batteries_v2.dll
+C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\android\assets\SQLitePCLRaw.core.dll
+C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\android\assets\SQLitePCLRaw.lib.e_sqlite3.dll
+C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\android\assets\SQLitePCLRaw.provider.e_sqlite3.dll
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\android\assets\System.Buffers.dll
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\android\assets\System.Core.dll
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\android\assets\System.dll
@@ -100,5 +106,6 @@ C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagem
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\android\assets\System.ObjectModel.dll
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\android\assets\System.Globalization.dll
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\android\assets\System.Reflection.Extensions.dll
+C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\android\assets\System.Linq.Expressions.dll
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\android\assets\Mono.Security.dll
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement.Android\obj\Debug\90\android\assets\System.ServiceModel.Internals.dll

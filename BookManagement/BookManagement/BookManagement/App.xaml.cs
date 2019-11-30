@@ -4,6 +4,7 @@ using BookManagement.ViewModels;
 using BookManagement.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace BookManagement
@@ -15,6 +16,12 @@ namespace BookManagement
          * This imposes a limitation in which the App class must have a default constructor. 
          * App(IPlatformInitializer initializer = null) cannot be handled by the Activator.
          */
+
+        //SQLiteで追加
+        static string databaseName = "Shop.db";
+        static string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        public static string DatabasePath = System.IO.Path.Combine(folderPath, databaseName);
+
         public App() : this(null) { }
 
         public App(IPlatformInitializer initializer) : base(initializer) { }

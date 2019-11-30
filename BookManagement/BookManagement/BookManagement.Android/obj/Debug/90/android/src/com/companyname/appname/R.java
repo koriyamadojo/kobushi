@@ -5268,10 +5268,11 @@ public final class R {
     public static final int ic_action_content_create=0x7f0d0000;
     public static final int ic_action_content_save=0x7f0d0001;
     public static final int ic_launcher=0x7f0d0002;
-    public static final int ic_menu_copy_holo_dark=0x7f0d0003;
-    public static final int ic_menu_cut_holo_dark=0x7f0d0004;
-    public static final int ic_menu_paste_holo_dark=0x7f0d0005;
-    public static final int ic_menu_search_holo_dark=0x7f0d0006;
+    public static final int ic_launcherr=0x7f0d0003;
+    public static final int ic_menu_copy_holo_dark=0x7f0d0004;
+    public static final int ic_menu_cut_holo_dark=0x7f0d0005;
+    public static final int ic_menu_paste_holo_dark=0x7f0d0006;
+    public static final int ic_menu_search_holo_dark=0x7f0d0007;
   }
   public static final class string {
     public static final int abc_action_bar_home_description=0x7f0e0000;

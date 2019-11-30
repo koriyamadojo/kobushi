@@ -6291,16 +6291,16 @@ namespace BookManagement.Droid
 			public const int splash_logo = 2131165495;
 			
 			// aapt resource value: 0x7F070138
-			public const int splash_logo_(1) = 2131165496;
+			public const int splash_logo1 = 2131165496;
 			
 			// aapt resource value: 0x7F070139
-			public const int splash_logo_(4) = 2131165497;
+			public const int splash_logo2 = 2131165497;
 			
 			// aapt resource value: 0x7F07013A
-			public const int splash_logo_(5) = 2131165498;
+			public const int splash_logo3 = 2131165498;
 			
 			// aapt resource value: 0x7F07013B
-			public const int splash_logo_(8) = 2131165499;
+			public const int splash_logo4 = 2131165499;
 			
 			// aapt resource value: 0x7F07013C
 			public const int splash_screen = 2131165500;
@@ -7524,16 +7524,19 @@ namespace BookManagement.Droid
 			public const int ic_launcher = 2131558402;
 			
 			// aapt resource value: 0x7F0D0003
-			public const int ic_menu_copy_holo_dark = 2131558403;
+			public const int ic_launcherr = 2131558403;
 			
 			// aapt resource value: 0x7F0D0004
-			public const int ic_menu_cut_holo_dark = 2131558404;
+			public const int ic_menu_copy_holo_dark = 2131558404;
 			
 			// aapt resource value: 0x7F0D0005
-			public const int ic_menu_paste_holo_dark = 2131558405;
+			public const int ic_menu_cut_holo_dark = 2131558405;
 			
 			// aapt resource value: 0x7F0D0006
-			public const int ic_menu_search_holo_dark = 2131558406;
+			public const int ic_menu_paste_holo_dark = 2131558406;
+			
+			// aapt resource value: 0x7F0D0007
+			public const int ic_menu_search_holo_dark = 2131558407;
 			
 			static Mipmap()
 			{

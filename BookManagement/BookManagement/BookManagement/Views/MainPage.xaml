@@ -47,23 +47,53 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
                 <RowDefinition Height="100" />
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="100" />
             </Grid.ColumnDefinitions>
 
 
             <Label HorizontalOptions="FillAndExpand"                        
-               FontFamily="{DynamicResource MaterialFontFamily}"
-               Text="これはアイコンフォントの「 &#xFDFA; 」です。" />
-
+                   FontFamily="{DynamicResource MaterialFontFamily}"
+                   Text="これはアイコンフォントの「 &#xFDFA; 」です。" 
+                   Grid.Row="0"
+                   Grid.ColumnSpan="4"/>
+            <Entry Text="{Binding NameEntry}" 
+                   Grid.Row="1"
+                   Grid.ColumnSpan="2"/>
+            <Entry Text="{Binding PhoneEntry}" 
+                   Grid.Row="1"
+                   Grid.Column="2"
+                   Grid.ColumnSpan="2"/>
+            <Button Text= "データベースに保存"
+                    Command="{Binding SaveButton_Clicked}"
+                    Grid.Row="2"
+                    Grid.ColumnSpan="4"/>
+            <Button Text="データベースから取得"
+                    Command="{Binding ReadButton_Clicked}"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="4"/>
+            <Label HorizontalOptions="FillAndExpand"                        
+                   Text="{Binding RegisteredBooksData}"
+                   Grid.Row="4"
+                   Grid.RowSpan="3"
+                   Grid.ColumnSpan="4"
+                   BackgroundColor="Pink"/>
 
             <ImageButton Clicked="ScanButtonClicked"
-                         Grid.Column="1"
-                         Grid.Row="1"
+                         Grid.Row="7"
+                         Grid.Column="3"
                          x:Name="btn"
                          Padding="10"
                          CornerRadius="35"
@@ -77,8 +107,7 @@
                     <FontImageSource
                         Color="white"
                         FontFamily="{DynamicResource MaterialFontFamily}"
-                        Glyph="{StaticResource plus}"
-                        />
+                        Glyph="{StaticResource plus}"/>
                 </ImageButton.Source>
             </ImageButton>
             
