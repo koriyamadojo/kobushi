@@ -12,15 +12,54 @@ namespace BookManagement.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
+        /*ここから*/
+        private List<Cat> _Cats;
+        public List<Cat> Cats
+        {
+            get { return _Cats; }
+            set { SetProperty(ref _Cats, value); }
+        }
+        /*ここまで*/
         public MainPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
             Title = "Book Mnagement";
+
+            /*ここから最後まで*/
+            Cats = new List<Cat>
+            {
+                new Cat { Name = "A", Comment = "a", Image = "bookImage.jpg" },
+                new Cat { Name = "B", Comment = "b", Image = "bookImage.jpg" },
+                new Cat { Name = "C", Comment = "c", Image = "bookImage.jpg" },
+                new Cat { Name = "D", Comment = "d", Image = "bookImage.jpg" },
+                new Cat { Name = "E", Comment = "e", Image = "bookImage.jpg" },
+                new Cat { Name = "F", Comment = "f", Image = "bookImage.jpg" },
+                new Cat { Name = "G", Comment = "g", Image = "" },
+                new Cat { Name = "H", Comment = "h", Image = "" }
+            };
+
+
+
             RegisteredBooks();
 
             SaveButton_Clicked = new DelegateCommand(() => SaveButton_Click());
             ReadButton_Clicked = new DelegateCommand(() => RegisteredBooks());
+            BookDetails_Clicked = new DelegateCommand(() => navigationService.NavigateAsync("BookDetailsPage"));
+
+        }   
+
+
+
+        //ListView表示用の猫のクラス
+        public class Cat
+        {
+            public string Name { get; set; }
+            public string Comment { get; set; }
+            public string Image { get; set; }
         }
+
+
+
 
         public DelegateCommand SaveButton_Clicked { get; private set; }
 
@@ -48,7 +87,28 @@ namespace BookManagement.ViewModels
             set { SetProperty(ref _RegisteredBooksData, value); }
         }
 
+        //本名
+        private string _BooksName;
+        public string BooksName
+        {
+            get { return _BooksName; }
+            set { SetProperty(ref _BooksName, value); }
+        }
+
+        //本名
+        private string _ImageUrl;
+        public string ImageUrl
+        {
+            get { return _ImageUrl; }
+            set { SetProperty(ref _ImageUrl, value); }
+        }
+
+
+
+
+
         public DelegateCommand ReadButton_Clicked { get; private set; }
+        public DelegateCommand BookDetails_Clicked { get; private set; }
 
 
         //保存ボタンがクリックされたらCustomerの名前を電話番号にデータを保存する
@@ -99,7 +159,13 @@ namespace BookManagement.ViewModels
                     RegisteredBooksData += customer.Id;
                     RegisteredBooksData += customer.Name;
                     RegisteredBooksData += customer.Phone;
+                    RegisteredBooksData += customer.title;
+                    RegisteredBooksData += customer.imageUrl;
+
+
                 }
+                BooksName = customers[0].title;
+                ImageUrl = customers[0].imageUrl;
             }
         }
     }

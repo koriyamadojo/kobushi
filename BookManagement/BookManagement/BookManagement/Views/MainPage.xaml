@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              mc:Ignorable="d"
              x:Class="BookManagement.Views.MainPage"
              Title="{Binding Title}">
@@ -47,24 +48,26 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
+                <!--<RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />-->
                 <RowDefinition Height="100" />
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
+                <!--<ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />-->
                 <ColumnDefinition Width="100" />
             </Grid.ColumnDefinitions>
 
+            
 
-            <Label HorizontalOptions="FillAndExpand"                        
+
+            <!--<Label HorizontalOptions="FillAndExpand"                        
                    FontFamily="{DynamicResource MaterialFontFamily}"
                    Text="これはアイコンフォントの「 &#xFDFA; 」です。" 
                    Grid.Row="0"
@@ -83,17 +86,45 @@
             <Button Text="データベースから取得"
                     Command="{Binding ReadButton_Clicked}"
                     Grid.Row="3"
-                    Grid.ColumnSpan="4"/>
-            <Label HorizontalOptions="FillAndExpand"                        
+                    Grid.ColumnSpan="4"/>-->
+            <!--<Label HorizontalOptions="FillAndExpand"                        
                    Text="{Binding RegisteredBooksData}"
                    Grid.Row="4"
                    Grid.RowSpan="3"
                    Grid.ColumnSpan="4"
-                   BackgroundColor="Pink"/>
+                   BackgroundColor="Pink"/>-->
 
+
+
+            <ListView ItemsSource="{Binding Cats}" 
+                      Grid.Column="0"
+                      Grid.Row="0"
+                      Grid.RowSpan="2"
+                      Grid.ColumnSpan="2">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="50">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" BackgroundColor="LightYellow" HeightRequest="100">
+                                <Image Source="{Binding Image}" HorizontalOptions="Center"/>
+                                <ffimageloading:CachedImage Source="{Binding imageUrl}"/>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text = "{Binding BooksName}" FontSize="18" />
+                                    <Label Text = "{Binding Comment}" />
+       
+                                </StackLayout>
+                                <Label HorizontalOptions="FillAndExpand"                        
+                                           Text="{Binding RegisteredBooksData}"/>
+                                <Button Text="詳細へ" Command="{Binding BookDetails_Clicked}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        
             <ImageButton Clicked="ScanButtonClicked"
-                         Grid.Row="7"
-                         Grid.Column="3"
+                         Grid.Row="1"
+                         Grid.Column="1"
                          x:Name="btn"
                          Padding="10"
                          CornerRadius="35"
@@ -110,8 +141,17 @@
                         Glyph="{StaticResource plus}"/>
                 </ImageButton.Source>
             </ImageButton>
-            
+
+            <Button Grid.Row="1"
+                    Grid.Column="0"
+                    Text="詳細へ" Command="{Binding BookDetails_Clicked}"/>
+
+
         </Grid>
     </ContentPage.Content>
+    
+
+    
+
 
 </ContentPage>

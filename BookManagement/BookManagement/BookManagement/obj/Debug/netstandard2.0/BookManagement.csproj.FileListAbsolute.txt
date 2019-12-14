@@ -16,11 +16,12 @@ C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagem
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement\bin\Debug\netstandard2.0\BookManagement.pdb
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement\obj\Debug\netstandard2.0\BookManagement.csprojAssemblyReference.cache
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement\obj\Debug\netstandard2.0\Views\BookDetailsPage.xaml.g.cs
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement\obj\Debug\netstandard2.0\Views\ScanPage.xaml.g.cs
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement\obj\Debug\netstandard2.0\BookManagement.AssemblyInfoInputs.cache
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement\obj\Debug\netstandard2.0\BookManagement.AssemblyInfo.cs
+C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement\obj\Debug\netstandard2.0\XamlC.stamp
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement\obj\Debug\netstandard2.0\BookManagement.csproj.CopyComplete
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement\obj\Debug\netstandard2.0\BookManagement.dll
 C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement\obj\Debug\netstandard2.0\BookManagement.pdb
-C:\My Programs\TECH\05_Xamarin\kobushi\BookManagement\BookManagement\BookManagement\obj\Debug\netstandard2.0\XamlC.stamp

@@ -42,6 +42,7 @@ namespace BookManagement
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<ScanPage, ScanPageViewModel>();
+            containerRegistry.RegisterForNavigation<BookDetailsPage, BookDetailsPageViewModel>();
         }
     }
 }
